@@ -67,7 +67,7 @@ down as many narratives as possible, and leave the estimation details to the ref
         
 Narrative: The coin-flip: one event occurs with probability $p$.</p>
 
-<p>Distribution: This is the Bernoulli distribution, which is one with probability $p$ and zero with
+<p>Distribution: This defines the Bernoulli distribution, which is one with probability $p$ and zero with
 probability $1-p$. The variance of a Bernoulli distribution is $p(1-p)$.</p>
 
 <p></div></p>
@@ -81,7 +81,27 @@ The mean is $Np$ and the variance is $Np(1-p)$.</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="clt"></a><h6>Mean of iid observations </h6><p>
+<p><div class="h2d"><a name="bernie"></a><h6>Draws from a more-than-binary option </h6><p>
+        
+Narrative: The die-roll: each observation is from a list of possible outcomes, each with its own
+probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event happens each time, so 
+$\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
+outcomes?</p>
+
+<p>Distribution: Multinomial$(n, {\bf p})$ distribution.</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="negbinom"></a><h6>Draws without replacement </h6><p>
+        
+Narrative: Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
+What are the odds that we get $x$ successes from $n$ draws without replacement?</p>
+
+<p>Distribution: Negative binomial$(s, f, n)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="clt"></a><h6>Mean of univariate iid observations </h6><p>
         
 Narrative: Make a large series of independent, identically distributed (iid) draws from a source.
 Report the mean of those draws.</p>
@@ -96,12 +116,32 @@ Report the mean of those draws.</p>
 <P>
 <h1>Wait times and frequency</h1><p></p>
 
-<p><div class="h2d"><a name="negbinom"></a><h6>Wait until a success</h6><p>
+<p><div class="h2d"><a name="negbinom"></a><h6>Wait until a success--discrete</h6><p>
         
 Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
-before we observe $k$ successes?</p>
+$x$ draws before we observe $k$ successes?</p>
 
-<p>Distribution: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p)$</p>
+<p>Distribution: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="eponential"></a><h6>Wait until a success--continuous</h6><p>
+        
+Narrative: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
+What is the likelihood that the first event will occur within $x$ periods?</p>
+
+<p>Distribution: Exponential$(\lambda)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="gamma"></a><h6>Wait until $k$ successes--continuous</h6><p>
+        
+Narrative: Events are a <a href="#poisson">Poisson</a> process: $\lambda$ events per time period. What is the
+likleihood that we will observe $x$ events in a span of $k$ time units?</p>
+
+<p>Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?</p>
+
+<p>Distribution: Gamma$(k, \lambda)(x)$</p>
 
 <p></div></p>
 
@@ -111,7 +151,7 @@ Narrative: Independent events (rainy day, landmine, bad data) occur at the
 mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?</p>
 
-<p>Distribution: Poisson$(t, \lambda)$</p>
+<p>Distribution: Poisson$(\lambda)(x)$</p>
 
 <p></div></p>
 
@@ -129,6 +169,20 @@ is $\max(x)$.</p>
 <p>The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ distribution.</p>
 
 <p>Distribution: The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ distribution.</p>
+
+<p></div></p>
+
+<p></P>
+
+<P>
+<h1>Other</h1><p></p>
+
+<p><div class="h2d"><a name="uniform"></a><h6>Everything is equally likely</h6><p>
+        
+Narrative: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
+range is as likely as any other draw within that range.</p>
+
+<p>Distribution: Uniform$(l, u)$</p>
 
 <p></div></p>
 
