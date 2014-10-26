@@ -26,7 +26,11 @@ define_blind(Code, <|<pre><code>$*</code></pre>|>)
 define_blind(Verbatim, <|<pre><code>$*</code></pre>|>)
 define_blind(Block, <|<blockquote><p>$*</blockquote>|>)
 
-define_blind(N2D, <|<div class="h2d"><a id="$2">Paragraph($1)</a>
+define_blind(Ref, <|<a href="#<||>m4_translit(<|$2|>, ' 	
+')">$1</a>|>)
+
+define_blind(N2D, <|<div class="h2d"><a name="<||>m4_translit(<|$2|>, ' 	
+')"></a>Paragraph($1)
         
 Narrative: $3
 

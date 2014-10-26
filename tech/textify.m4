@@ -44,7 +44,11 @@ define_blind(Subsection, <|\subsection{$*}|>)
 define_blind(Paragraph, <|\paragraph{$*}|>)
 define_blind(Link, <|\link{m4_shift($*)}{$1}|>)
 
-define_blind(N2D, <|\paragraph{$1}\label{$2}\leavevmode\\
+define_ref(Ref, <|$1 (page \pageref{m4_translit(<|$2|>, ' 	
+')})|>)
+
+define_blind(N2D, <|\paragraph{$1}\label{m4_translit(<|$2|>, ' 	
+')}\leavevmode\\
 
 Narrative: $3
 

@@ -20,7 +20,7 @@ The mean is $Np$ and the variance is $Np(1-p)$.
 
 N2D(Mean of iid observations ~~clt~~
 Make a large series of independent, identically distributed (iid) draws from a source.
-Take the mean of those draws. The mean of the draws 
+Report the mean of those draws.
 ~~
 As $N\to\infty$, the distribution of repeated means will be a Normal distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
 Citep(klemens:modeling)

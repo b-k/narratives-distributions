@@ -1,7 +1,7 @@
 Chapter(Wait times and frequency)
 
 N2D(Wait until a success~~negbinom~~
-one Binomial (coin-flip) draw per period. What is the likelihood that we will have to wait
+One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that we will have to wait
 before we observe $k$ successes?
 ~~
 Link(http://en.wikipedia.org/wiki/Negative_binomial_distribution~~Negative binomial)$(k, p)$
