@@ -1,0 +1,11 @@
+Chapter(Order statistics)
+
+N2D(The $N$th largest draw from a Uniform~~betafromuniform~~
+The first em(order statistic) of a set of numbers $x$ is the smallest number in the
+set; the second is the next-to-smallest, up to the largest order statistic, which
+is $\max(x)$.
+
+The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ distribution.
+~~
+The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ distribution.
+)
