@@ -11,7 +11,7 @@ pdf:
 	cd out && pdflatex narratives
 	cd out && pdflatex narratives
 
-HTMLout=~/tmp/narratives
+HTMLout=~/tmp/narratives-distributions
 
 html:
 	mkdir -p out
