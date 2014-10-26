@@ -26,12 +26,12 @@ define_blind(Code, <|<pre><code>$*</code></pre>|>)
 define_blind(Verbatim, <|<pre><code>$*</code></pre>|>)
 define_blind(Block, <|<blockquote><p>$*</blockquote>|>)
 
-define_blind(N2D, <|<span class="h2d">Paragraph($1)<a id="$2"/>
+define_blind(N2D, <|<div class="h2d"><a id="$2">Paragraph($1)</a>
         
 Narrative: $3
 
 Distribution: $4
-</span>|>)
+</div>|>)
 
 define_blind(Citet, <|<a href="#$1">$2</a>|>)
 define_blind(Citep, <|(<a href="#$1">$1</a>)|>)

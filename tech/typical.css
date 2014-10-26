@@ -360,6 +360,8 @@ width: 80%;
 BODY {
 /*font-family: "Lucida Grande", "Lucida Sans Unicode", "Verdana", "Geneva", sans-serif;*/
 background-color: #FFFFDE;
+	margin-right: 10%;
+	margin-left: 10%;
 }
 
 

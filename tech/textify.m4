@@ -44,6 +44,14 @@ define_blind(Subsection, <|\subsection{$*}|>)
 define_blind(Paragraph, <|\paragraph{$*}|>)
 define_blind(Link, <|\link{m4_shift($*)}{$1}|>)
 
+define_blind(N2D, <|\paragraph{$1}\label{$2}\leavevmode\\
+
+Narrative: $3
+
+Distribution: $4
+
+|>)
+
 define_blind(Items,
 <|\begin{itemize}
 \setlength{\itemsep}{0pt}

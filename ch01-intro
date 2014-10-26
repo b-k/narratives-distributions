@@ -9,10 +9,10 @@ micro-level foundation.
 Here is a simple example of going from a real-world situation to an estimable mathematical model:
 
 N2D(A sample narrative~~samp~~
-The story: Make a large series of independent, identically distributed (iid) draws from a source.
+Make a large series of independent, identically distributed (iid) draws from a source.
 Take the mean of those draws.
 ~~
-The result: The distribution of repeated means will be a Normal distribution.
+The distribution of repeated means will be a Normal distribution.
 )
 
 If you wanted to write a simulation, in which individual agents each experience some iid

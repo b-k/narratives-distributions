@@ -1,4 +1,4 @@
-This project is lists open-form narratives and the closed-form distributions that
+This project lists open-form narratives and the closed-form distributions that
 approximate them. Its intent is to help you build estimable statistical models on a sound
 micro-level foundation.
 
@@ -27,4 +27,6 @@ are available.
 
 Little, if any, of this is novel, and every narrative-to-distribution should have a
 reference to an existing work, (including Wikipedia, because this is uncontroversial,
-textbook stuff).
+textbook stuff). However, it is being presented in what seems to be a novel way, to
+facilitate the development of detailed micro-level narratives using known bulding
+blocks where they are available.
