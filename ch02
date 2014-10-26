@@ -1,0 +1,26 @@
+Chapter(Aggregation)
+
+
+Section(Central Limit Theorems)
+
+N2D(Draws from a binary option ~~bernie~~
+The coin-flip: one event occurs with probability $p$.
+~~
+This is the Bernoulli distribution, which is one with probability $p$ and zero with
+probability $1-p$. The variance of a Bernoulli distribution is $p(1-p)$.
+)
+
+N2D(Multiple draws from a binary option ~~binom~~
+Draw $N$ events with probability $p$.
+~~
+The Binomial$(N, p)$ distribution.
+The mean is $Np$ and the variance is $Np(1-p)$.
+)
+
+
+N2D(Mean of iid observations ~~clt~~
+Make a large series of independent, identically distributed (iid) draws from a source.
+Take the mean of those draws. The mean of the draws 
+~~
+As $N\to\infty$, the distribution of repeated means will be a Normal distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
+)
