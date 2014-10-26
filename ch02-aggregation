@@ -6,7 +6,7 @@ Section(Central Limit Theorems)
 N2D(Draws from a binary option ~~bernie~~
 The coin-flip: one event occurs with probability $p$.
 ~~
-This is the Bernoulli distribution, which is one with probability $p$ and zero with
+This defines the Bernoulli distribution, which is one with probability $p$ and zero with
 probability $1-p$. The variance of a Bernoulli distribution is $p(1-p)$.
 )
 
@@ -17,11 +17,27 @@ The Binomial$(N, p)$ distribution.
 The mean is $Np$ and the variance is $Np(1-p)$.
 )
 
+N2D(Draws from a more-than-binary option ~~bernie~~
+The die-roll: each observation is from a list of possible outcomes, each with its own
+probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event happens each time, so 
+$\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
+outcomes?
+~~
+Multinomial$(n, {\bf p})$ distribution.
+)
 
-N2D(Mean of iid observations ~~clt~~
+N2D(Draws without replacement ~~negbinom~~
+Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
+What are the odds that we get $x$ successes from $n$ draws without replacement?
+~~
+Negative binomial$(s, f, n)(x)$
+)
+
+N2D(Mean of univariate iid observations ~~clt~~
 Make a large series of independent, identically distributed (iid) draws from a source.
 Report the mean of those draws.
 ~~
 As $N\to\infty$, the distribution of repeated means will be a Normal distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
 Citep(klemens:modeling)
 )
+

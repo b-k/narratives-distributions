@@ -1,10 +1,35 @@
 Chapter(Wait times and frequency)
 
-N2D(Wait until a success~~negbinom~~
+N2D(Wait until a success--discrete~~negbinom~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that we will have to wait
-before we observe $k$ successes?
+$x$ draws before we observe $k$ successes?
 ~~
-Link(http://en.wikipedia.org/wiki/Negative_binomial_distribution~~Negative binomial)$(k, p)$
+Link(http://en.wikipedia.org/wiki/Negative_binomial_distribution~~Negative binomial)$(k, p)(x)$
+)
+
+N2D(Wait until a success--continuous~~eponential~~
+Events occur via a Ref(Poisson~~poisson) process ($\lambda$ events per time/space span).
+What is the likelihood that the first event will occur within $x$ periods?
+~~
+Exponential$(\lambda)(x)$
+)
+
+N2D(Wait until $k$ successes--continuous~~gamma~~
+Events are a Ref(Poisson~~poisson) process: $\lambda$ events per time period. What is the
+likleihood that we will observe $x$ events in a span of $k$ time units?
+
+Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?
+~~
+Gamma$(k, \lambda)(x)$
+)
+
+Comment(
+N2D(Wait until a success, but success odds change~~weibull~~
+Events occur via a Ref(Poisson~~poisson)-like process ($\lambda$ events per time/space span), but the rate $\lambda$ changes with time.
+What is the likelihood that the first event will occur within $x$ periods?
+~~
+Exponential$(\lambda)(x)$
+)
 )
 
 N2D(Events per period~~poisson~~
@@ -12,5 +37,6 @@ Independent events (rainy day, landmine, bad data) occur at the
 mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?
 ~~
-Poisson$(t, \lambda)$
+Poisson$(\lambda)(x)$
 )
+
