@@ -107,7 +107,7 @@ Narrative: Make a large series of independent, identically distributed (iid) dra
 Report the mean of those draws.</p>
 
 <p>Distribution: As $N\to\infty$, the distribution of repeated means will be a Normal distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
-(<a href="#klemens:modeling">klemens:modeling</a>)</p>
+(<a href="#klemens:modeling">klemens:modeling </a>)</p>
 
 <p></div></p>
 
@@ -118,7 +118,7 @@ Make a large series of independent, identically distributed (iid) draws from a s
 Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
 <p>Distribution: As $N\to\infty$, the distribution of products will be a lognormal distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
-(<a href="#klemens:modeling">klemens:modeling</a>)</p>
+(<a href="#klemens:modeling">klemens:modeling </a>)</p>
 
 <p></div></p>
 
@@ -153,6 +153,21 @@ likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 <p>Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?</p>
 
 <p>Distribution: Gamma$(k, \lambda)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="weibull"></a><h6>Wait until a success,but time scale is not even or success odds change</h6><p>
+        
+Narrative: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
+so the likelihood of observing an event within $x$ periods is Exponential$(\lambda)(x)$.
+But the time scale is distorted, so $y=x^{1/\gamma}$. [Note that an additive or
+multiplicative distortion would still give us an Exponential distribution.]</p>
+
+<p>Another way to describe this is that the event rate is  changing with time. If $\gamma > 1$,
+events are more likely after some time. If $\gamma < 1$, events are more likely to occur early.       
+(<a href="#casella:berger">casella:berger p 103</a>)</p>
+
+<p>Distribution: Weibull$(\gamma, \lambda)(x)$.</p>
 
 <p></div></p>
 
@@ -199,4 +214,4 @@ range is as likely as any other draw within that range.</p>
 
 <p></P>
 <h2>Bibliography</h2>
-</p><p> [<a href="#elbers:lanjouw">elbers:lanjouw</a>] Elbers, C., J. O. Lanjouw, and P. Lanjouw (2003). Micro-level estimation of poverty and inequality. <em>Econometrica</em> <em>71</em>(1), pp. 355--364.</p><p> [<a href="#fay:herriot">fay:herriot</a>] Fay, R. E. and R. A. Herriot (1979). Estimates of income for small places: An application of  James-Stein procedures to census data. <em>Journal of the American Statistical Association</em> <em> 74</em>(366), pp. 269--277.</p><p> [<a href="#klemens:modeling">klemens:modeling</a>] Klemens, B. (2008). <em>Modeling with Data: Tools and Techniques for Statistical  Computing</em>. Princeton University Press.</p><p> [<a href="#molina:rao">molina:rao</a>] Molina, I. and J. N. K. Rao (2010). Small area estimation of poverty indicators. <em>Canadian Journal of Statistics</em> <em>38</em>(3), 369--385.</body></html>
+</p><p> [<a href="#casella:berger">casella:berger</a>] Casella, G. and R. L. Berger (1990). <em>Statistical Inference</em>. Duxbury Press.</p><p> [<a href="#klemens:modeling">klemens:modeling</a>] Klemens, B. (2008). <em>Modeling with Data: Tools and Techniques for Statistical  Computing</em>. Princeton University Press.</body></html>
