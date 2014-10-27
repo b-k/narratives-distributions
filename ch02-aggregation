@@ -1,7 +1,7 @@
 Chapter(Aggregation)
 
 
-Section(Central Limit Theorems)
+Section(Coin flips and die rolls)
 
 N2D(Draws from a binary option ~~bernie~~
 The coin-flip: one event occurs with probability $p$.
@@ -32,6 +32,8 @@ What are the odds that we get $x$ successes from $n$ draws without replacement?
 ~~
 Negative binomial$(s, f, n, x)$
 )
+
+Section(Central Limit Theorems)
 
 N2D(Mean of univariate iid observations ~~clt~~
 Make a large series of independent, identically distributed (iid) draws from a source.

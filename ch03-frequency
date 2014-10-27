@@ -1,6 +1,8 @@
 Chapter(Wait times and frequency)
 
-N2D(Wait until one success--discrete~~geometric~~
+Section(Discrete)
+
+N2D(Wait until one success~~geometric~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that the
 first event will occur at period $x$? Citep(goswami:rao~~p 9)
 ~~
@@ -8,21 +10,46 @@ Link(https://en.wikipedia.org/wiki/Geometric_distribution~~Geometric)$(p, x)$
 )
 
 
-N2D(Wait until $k$ successes--discrete~~negbinom~~
+N2D(Wait until $k$ successes~~negbinom~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that we will have to wait
 $x$ draws before we observe $k$ successes?
 ~~
 Link(http://en.wikipedia.org/wiki/Negative_binomial_distribution~~Negative binomial)$(k, p, x)$
 )
 
-N2D(Wait until a success--continuous~~eponential~~
+N2D(Markov chain stabilization~~markovgeometric~~
+
+A system is represented by a column vector of states ${\bf S}$, which
+changes states according to a Markov matrix $P$. What is the likelihood that it
+will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?
+~~
+The Markov Geometric Distribution,
+$$MGD(R, Q, t)={\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
+where $Q$ is the diagonal matrix matching the diagonal of $P$, $R$ is the
+off-diagonal of $P$ (so $R=P-Q$), ${\bf 1}$ is an appropriately-sized column vector of ones,
+and $I$ and appropriately-sized identity matrix.
+Citep(gani:jerwood~~eqn 2.9), notation via Citep(goswami:rao~~p 197).
+)
+
+N2D(Events per period~~poisson~~
+Independent events (rainy day, landmine, bad data) occur at the
+mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
+probability that there will be $t$ events in a single span?
+~~
+Poisson$(\lambda, x)$
+)
+
+
+Section(Continuous)
+
+N2D(Wait until a success~~eponential~~
 Events occur via a Ref(Poisson~~poisson) process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?
 ~~
 Exponential$(\lambda, x)$
 )
 
-N2D(Wait until $k$ successes--continuous~~gamma~~
+N2D(Wait until $k$ successes~~gamma~~
 Events are a Ref(Poisson~~poisson) process: $\lambda$ events per time period. What is the
 likleihood that we will observe $x$ events in a span of $k$ time units?
 
@@ -43,27 +70,3 @@ Citep(casella:berger~~ p 103)
 ~~
 Weibull$(\gamma, \lambda, x)$.
 )
-
-N2D(Events per period~~poisson~~
-Independent events (rainy day, landmine, bad data) occur at the
-mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
-probability that there will be $t$ events in a single span?
-~~
-Poisson$(\lambda, x)$
-)
-
-
-N2D(Markov chain stabilization~~markovgeometric~~
-
-A system is represented by a column vector of states ${\bf S}$, which
-changes states according to a Markov matrix $P$. What is the likelihood that it
-will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?
-~~
-The Markov Geometric Distribution,
-$$MGD(R, Q, t)={\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
-where $Q$ is the diagonal matrix matching the diagonal of $P$, $R$ is the
-off-diagonal of $P$ (so $R=P-Q$), ${\bf 1}$ is an appropriately-sized column vector of ones,
-and $I$ and appropriately-sized identity matrix.
-Citep(gani:jerwood~~eqn 2.9), notation via Citep(goswami:rao~~p 197).
-)
-
