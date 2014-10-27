@@ -36,3 +36,34 @@ provide proofs here, unless they are useful for elucidating the transformation.
 Also, estimation is often not a trivial matter. Some of these examples may break for
 small $N$. We may add these notes later, but at this stage it would be nice to just get
 down as many narratives as possible, and leave the estimation details to the references.
+TeX(\def\Re{{\ensuremath{\mathbb R}}\xspace}
+        \def\datas{\ensuremath{{\mathbb D}}\xspace}
+        \def\params{\ensuremath{{\mathbb P}}\xspace}
+        \def\models{\ensuremath{{\mathbb M}}\xspace}
+        \def\mod#1{\ensuremath{M_{#1}}\xspace})
+HTML($\def\Re{{\mathbb R}}
+        \def\datas{{\mathbb D}}
+        \def\params{{\mathbb P}}
+        \def\models{{\mathbb M}}
+        \def\mod#1{M_{#1}}$)
+
+Paragraph(Notation) The Normal distribution is a mapping of the form $f:(\mu, \sigma, x)
+\to \Re^+$. We could also fix $\mu$ and $\sigma$, which produces a univariate function
+$f:x\to\Re^+$, which makes use of a meta-function of the form $N:(\mu, \sigma) \to
+(f:x\to\Re^+)$. Textbooks (and Wikipedia) often characterize ``the Gaussian distribution''
+to indicate this meta-function that produces a series of Gaussian distribution functions
+depending on the values to which $\mu$ and $\sigma$ have been fixed.
+
+This document defines the Gaussian distribution as the mapping $f:(\mu, \sigma, x) \to \Re^+$.
+Notationally, this means that the distribution would be written with three inputs,
+$f(\mu, \sigma, x)$, where we understand all but the last inputs to be parameters, and the
+last input to be observed data. Grammaticaly, this means that a distribution is a unique
+entity (a single point in the space of functions), not a collection or class of
+similar entities, and this implies that distribution names should be capitalized under
+common English grammatical rules.
+
+It would be equally coherent to describe the family of Gaussian distributions, where
+fixing $\mu=3$ and $\sigma=2$ (for example) produces a single Gaussian distribution,
+often notated with something like ${\cal N}(3, 2)$, with the understanding that this
+is a univariate function $x\to\Re^+$.  In the notation here, that distribution would
+be written as ${\cal N}(3, 2, x)$.
