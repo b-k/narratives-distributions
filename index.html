@@ -107,7 +107,7 @@ Narrative: Make a large series of independent, identically distributed (iid) dra
 Report the mean of those draws.</p>
 
 <p>Distribution: As $N\to\infty$, the distribution of repeated means will be a Normal distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
-(<a href="#klemens:modeling">klemens:modeling </a>)</p>
+(<a href="#klemens:modeling">klemens:modeling</a>)</p>
 
 <p></div></p>
 
@@ -118,7 +118,7 @@ Make a large series of independent, identically distributed (iid) draws from a s
 Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
 <p>Distribution: As $N\to\infty$, the distribution of products will be a lognormal distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
-(<a href="#klemens:modeling">klemens:modeling </a>)</p>
+(<a href="#klemens:modeling">klemens:modeling</a>)</p>
 
 <p></div></p>
 
@@ -127,7 +127,16 @@ Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 <P>
 <h1>Wait times and frequency</h1><p></p>
 
-<p><div class="h2d"><a name="negbinom"></a><h6>Wait until a success--discrete</h6><p>
+<p><div class="h2d"><a name="geometric"></a><h6>Wait until one success--discrete</h6><p>
+        
+Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
+first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
+
+<p>Distribution: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="negbinom"></a><h6>Wait until $k$ successes--discrete</h6><p>
         
 Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
 $x$ draws before we observe $k$ successes?</p>
@@ -156,7 +165,7 @@ likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="weibull"></a><h6>Wait until a success,but time scale is not even or success odds change</h6><p>
+<p><div class="h2d"><a name="weibull"></a><h6>Wait until a success, but time scale is not even or success odds change</h6><p>
         
 Narrative: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
 so the likelihood of observing an event within $x$ periods is Exponential$(\lambda)(x)$.
@@ -165,7 +174,7 @@ multiplicative distortion would still give us an Exponential distribution.]</p>
 
 <p>Another way to describe this is that the event rate is  changing with time. If $\gamma > 1$,
 events are more likely after some time. If $\gamma < 1$, events are more likely to occur early.       
-(<a href="#casella:berger">casella:berger p 103</a>)</p>
+(<a href="#casella:berger">casella:berger, p 103</a>)</p>
 
 <p>Distribution: Weibull$(\gamma, \lambda)(x)$.</p>
 
@@ -178,6 +187,21 @@ mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?</p>
 
 <p>Distribution: Poisson$(\lambda)(x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="markovgeometric"></a><h6>Markov chain stabilization</h6><p>
+        
+Narrative: A system is represented by a column vector of states ${\bf S}$, which
+changes states according to a Markov matrix $P$. What is the likelihood that it
+will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?</p>
+
+<p>Distribution: The Markov Geometric Distribution,
+$${\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
+where $Q$ is the diagonal matrix matching the diagonal of $P$, $R$ is the
+off-diagonal of $P$ (so $R=P-Q$), {\bf 1} is an appropriately-sized column vector of ones,
+and $I$ and appropriately-sized identity matrix.
+(<a href="#gani:jerwood">gani:jerwood, eqn 2.9</a>), notation via (<a href="#goswami:rao">goswami:rao, p 197</a>).</p>
 
 <p></div></p>
 
@@ -214,4 +238,4 @@ range is as likely as any other draw within that range.</p>
 
 <p></P>
 <h2>Bibliography</h2>
-</p><p> [<a href="#casella:berger">casella:berger</a>] Casella, G. and R. L. Berger (1990). <em>Statistical Inference</em>. Duxbury Press.</p><p> [<a href="#klemens:modeling">klemens:modeling</a>] Klemens, B. (2008). <em>Modeling with Data: Tools and Techniques for Statistical  Computing</em>. Princeton University Press.</body></html>
+</p><p> [<a href="#casella:berger">casella:berger</a>] Casella, G. and R. L. Berger (1990). <em>Statistical Inference</em>. Duxbury Press.</p><p> [<a href="#gani:jerwood">gani:jerwood</a>] Gani, J. and D. Jerwood (1971). Markov chain methods in chain binomial epidemic models. <em>Biometrics</em> <em>27</em>(3), 591--603.</p><p> [<a href="#goswami:rao">goswami:rao</a>] Goswami, A. and B. Rao (2006). <em>A Course in Applied Stochastic Processes</em>. Number 40 in Texts and Readings in Mathematics. Hindustan Book  Agency.</p><p> [<a href="#klemens:modeling">klemens:modeling</a>] Klemens, B. (2008). <em>Modeling with Data: Tools and Techniques for Statistical  Computing</em>. Princeton University Press.</body></html>
