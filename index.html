@@ -56,6 +56,32 @@ provide proofs here, unless they are useful for elucidating the transformation.<
 small $N$. We may add these notes later, but at this stage it would be nice to just get
 down as many narratives as possible, and leave the estimation details to the references.</p>
 
+<p>$\def\Re{{\mathbb R}}
+        \def\datas{{\mathbb D}}
+        \def\params{{\mathbb P}}
+        \def\models{{\mathbb M}}
+        \def\mod#1{M_{#1}}$</p>
+
+<h6>Notation</h6><p> The Normal distribution is a mapping of the form $f:(\mu, \sigma, x)
+\to \Re^+$. We could also fix $\mu$ and $\sigma$, which produces a univariate function
+$f:x\to\Re^+$, which makes use of a meta-function of the form $N:(\mu, \sigma) \to
+(f:x\to\Re^+)$. Textbooks (and Wikipedia) often characterize “the Gaussian distribution''
+to indicate this meta-function that produces a series of Gaussian distribution functions
+depending on the values of $\mu$ and $\sigma$.</p>
+
+<p>This document defines the Gaussian distribution as the mapping $f:(\mu, \sigma, x) \to \Re^+$.
+Notationally, this means that the distribution would be written with three inputs,
+$f(\mu, \sigma, x)$, where we understand all but the last inputs to be parameters, and the
+last input to be observed data. Grammaticaly, this means that a distribution is a unique
+entity, not a collection or class of similar entities, which means that distribution names
+should be capitalized under common English grammatical rules.</p>
+
+<p>It would be equally coherent to describe the family of Gaussian distributions, where
+fixing $\mu=3$ and $\sigma=2$ (for example) produces a single Gaussian distribution,
+often notated with something like ${\cal N}(3, 2)$, with the understanding that this
+is a univariate function $x\to\Re^+$.  In the notation here, that distribution would
+be written as ${\cal N}(3, 2, x)$.</p>
+
 <p></P>
 
 <P>
@@ -97,7 +123,7 @@ outcomes?</p>
 Narrative: Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
 What are the odds that we get $x$ successes from $n$ draws without replacement?</p>
 
-<p>Distribution: Negative binomial$(s, f, n)(x)$</p>
+<p>Distribution: Negative binomial$(s, f, n, x)$</p>
 
 <p></div></p>
 
@@ -132,7 +158,7 @@ Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
 first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
 
-<p>Distribution: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p)(x)$</p>
+<p>Distribution: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p, x)$</p>
 
 <p></div></p>
 
@@ -141,7 +167,7 @@ first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</
 Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
 $x$ draws before we observe $k$ successes?</p>
 
-<p>Distribution: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p)(x)$</p>
+<p>Distribution: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p, x)$</p>
 
 <p></div></p>
 
@@ -150,7 +176,7 @@ $x$ draws before we observe $k$ successes?</p>
 Narrative: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?</p>
 
-<p>Distribution: Exponential$(\lambda)(x)$</p>
+<p>Distribution: Exponential$(\lambda, x)$</p>
 
 <p></div></p>
 
@@ -161,14 +187,14 @@ likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 
 <p>Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?</p>
 
-<p>Distribution: Gamma$(k, \lambda)(x)$</p>
+<p>Distribution: Gamma$(k, \lambda, x)$</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="weibull"></a><h6>Wait until a success, but time scale is not even or success odds change</h6><p>
         
 Narrative: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
-so the likelihood of observing an event within $x$ periods is Exponential$(\lambda)(x)$.
+so the likelihood of observing an event within $x$ periods is Exponential$(\lambda, x)$.
 But the time scale is distorted, so $y=x^{1/\gamma}$. [Note that an additive or
 multiplicative distortion would still give us an Exponential distribution.]</p>
 
@@ -176,7 +202,7 @@ multiplicative distortion would still give us an Exponential distribution.]</p>
 events are more likely after some time. If $\gamma < 1$, events are more likely to occur early.       
 (<a href="#casella:berger">casella:berger, p 103</a>)</p>
 
-<p>Distribution: Weibull$(\gamma, \lambda)(x)$.</p>
+<p>Distribution: Weibull$(\gamma, \lambda, x)$.</p>
 
 <p></div></p>
 
@@ -186,7 +212,7 @@ Narrative: Independent events (rainy day, landmine, bad data) occur at the
 mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?</p>
 
-<p>Distribution: Poisson$(\lambda)(x)$</p>
+<p>Distribution: Poisson$(\lambda, x)$</p>
 
 <p></div></p>
 
@@ -197,7 +223,7 @@ changes states according to a Markov matrix $P$. What is the likelihood that it
 will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?</p>
 
 <p>Distribution: The Markov Geometric Distribution,
-$${\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
+$$MGD(R, Q, t)={\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
 where $Q$ is the diagonal matrix matching the diagonal of $P$, $R$ is the
 off-diagonal of $P$ (so $R=P-Q$), ${\bf 1}$ is an appropriately-sized column vector of ones,
 and $I$ and appropriately-sized identity matrix.
