@@ -41,3 +41,13 @@ As $N\to\infty$, the distribution of repeated means will be a Normal distributio
 Citep(klemens:modeling)
 )
 
+
+N2D(Product of univariate iid observations ~~clt~~
+Begin with a value $x$.
+Make a large series of independent, identically distributed (iid) draws from a source.
+Report the product, $x\cdot d_1 \cdot d_2 ...$.
+~~
+As $N\to\infty$, the distribution of products will be a lognormal distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
+Citep(klemens:modeling)
+)
+
