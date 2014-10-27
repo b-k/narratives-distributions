@@ -24,10 +24,10 @@ micro-level foundation.</p>
 
 <p><div class="h2d"><a name="samp"></a><h6>A sample narrative</h6><p>
         
-Narrative: Make a large series of independent, identically distributed (iid) draws from a source.
+<em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
 Take the mean of those draws.</p>
 
-<p>Distribution: The distribution of repeated means will be a Normal distribution.</p>
+<p><em>Distribution</em>: The distribution of repeated means will be a Normal distribution.</p>
 
 <p></div></p>
 
@@ -53,12 +53,6 @@ provide proofs here, unless they are useful for elucidating the transformation.<
 small $N$. We may add these notes later, but at this stage it would be nice to just get
 down as many narratives as possible, and leave the estimation details to the references.</p>
 
-<p>$\def\Re{{\mathbb R}}
-        \def\datas{{\mathbb D}}
-        \def\params{{\mathbb P}}
-        \def\models{{\mathbb M}}
-        \def\mod#1{M_{#1}}$</p>
-
 <p></P>
 
 <P>
@@ -68,39 +62,39 @@ down as many narratives as possible, and leave the estimation details to the ref
 
 <p><div class="h2d"><a name="bernie"></a><h6>Draws from a binary option </h6><p>
         
-Narrative: The coin-flip: one event occurs with probability $p$.</p>
+<em>Narrative</em>: The coin-flip: one event occurs with probability $p$.</p>
 
-<p>Distribution: This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
+<p><em>Distribution</em>: This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
 probability $1-p$. The variance of a Bernoulli Distribution is $p(1-p)$.</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="binom"></a><h6>Multiple draws from a binary option </h6><p>
         
-Narrative: Draw $N$ events with probability $p$.</p>
+<em>Narrative</em>: Draw $N$ events with probability $p$.</p>
 
-<p>Distribution: The Binomial$(N, p)$ Distribution.
+<p><em>Distribution</em>: The Binomial$(N, p)$ Distribution.
 The mean is $Np$ and the variance is $Np(1-p)$.</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="bernie"></a><h6>Draws from a more-than-binary option </h6><p>
         
-Narrative: The die-roll: each observation is from a list of possible outcomes, each with its own
+<em>Narrative</em>: The die-roll: each observation is from a list of possible outcomes, each with its own
 probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event happens each time, so 
 $\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
 outcomes?</p>
 
-<p>Distribution: Multinomial$(n, {\bf p})$.</p>
+<p><em>Distribution</em>: Multinomial$(n, {\bf p})$.</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="negbinom"></a><h6>Draws without replacement </h6><p>
         
-Narrative: Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
+<em>Narrative</em>: Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
 What are the odds that we get $x$ successes from $n$ draws without replacement?</p>
 
-<p>Distribution: Negative binomial$(s, f, n, x)$</p>
+<p><em>Distribution</em>: Negative binomial$(s, f, n, x)$</p>
 
 <p></div></p>
 
@@ -108,21 +102,21 @@ What are the odds that we get $x$ successes from $n$ draws without replacement?<
 
 <p><div class="h2d"><a name="clt"></a><h6>Mean of univariate iid observations </h6><p>
         
-Narrative: Make a large series of independent, identically distributed (iid) draws from a source.
+<em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
 Report the mean of those draws.</p>
 
-<p>Distribution: As $N\to\infty$, the distribution of repeated means will be a Normal Distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
+<p><em>Distribution</em>: As $N\to\infty$, the distribution of repeated means will be a Normal Distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
 (<a href="#klemens:modeling">klemens:modeling</a>)</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="clt"></a><h6>Product of univariate iid observations </h6><p>
         
-Narrative: Begin with a value $x$.
+<em>Narrative</em>: Begin with a value $x$.
 Make a large series of independent, identically distributed (iid) draws from a source.
 Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
-<p>Distribution: As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
+<p><em>Distribution</em>: As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
 (<a href="#klemens:modeling">klemens:modeling</a>)</p>
 
 <p></div></p>
@@ -136,29 +130,29 @@ Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
 <p><div class="h2d"><a name="geometric"></a><h6>Wait until one success</h6><p>
         
-Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
+<em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
 first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
 
-<p>Distribution: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p, x)$</p>
+<p><em>Distribution</em>: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p, x)$</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="negbinom"></a><h6>Wait until $k$ successes</h6><p>
         
-Narrative: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
+<em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
 $x$ draws before we observe $k$ successes?</p>
 
-<p>Distribution: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p, x)$</p>
+<p><em>Distribution</em>: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p, x)$</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="markovgeometric"></a><h6>Markov chain stabilization</h6><p>
         
-Narrative: A system is represented by a column vector of states ${\bf S}$, which
+<em>Narrative</em>: A system is represented by a column vector of states ${\bf S}$, which
 changes states according to a Markov matrix $P$. What is the likelihood that it
 will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?</p>
 
-<p>Distribution: The Markov Geometric Distribution,
+<p><em>Distribution</em>: The Markov Geometric Distribution,
 $$MGD(R, Q, t)={\bf 1}'(I-tR)^{-1}(tQ){\bf 1},$$
 where $Q$ is the diagonal matrix matching the diagonal of $P$, $R$ is the
 off-diagonal of $P$ (so $R=P-Q$), ${\bf 1}$ is an appropriately-sized column vector of ones,
@@ -169,11 +163,11 @@ and $I$ and appropriately-sized identity matrix.
 
 <p><div class="h2d"><a name="poisson"></a><h6>Events per period</h6><p>
         
-Narrative: Independent events (rainy day, landmine, bad data) occur at the
+<em>Narrative</em>: Independent events (rainy day, landmine, bad data) occur at the
 mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?</p>
 
-<p>Distribution: Poisson$(\lambda, t)$</p>
+<p><em>Distribution</em>: Poisson$(\lambda, t)$</p>
 
 <p></div></p>
 
@@ -181,27 +175,27 @@ probability that there will be $t$ events in a single span?</p>
 
 <p><div class="h2d"><a name="eponential"></a><h6>Wait until a success</h6><p>
         
-Narrative: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
+<em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?</p>
 
-<p>Distribution: Exponential$(\lambda, x)$</p>
+<p><em>Distribution</em>: Exponential$(\lambda, x)$</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="gamma"></a><h6>Wait until $k$ successes</h6><p>
         
-Narrative: Events are a <a href="#poisson">Poisson</a> process: $\lambda$ events per time period. What is the
+<em>Narrative</em>: Events are a <a href="#poisson">Poisson</a> process: $\lambda$ events per time period. What is the
 likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 
 <p>Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?</p>
 
-<p>Distribution: Gamma$(k, \lambda, x)$</p>
+<p><em>Distribution</em>: Gamma$(k, \lambda, x)$</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="weibull"></a><h6>Wait until a success, but time scale is not even or success odds change</h6><p>
         
-Narrative: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
+<em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
 so the likelihood of observing an event within $x$ periods is Exponential$(\lambda, x)$.
 But the time scale is distorted, so $y=x^{1/\gamma}$. [Note that an additive or
 multiplicative distortion would still give us an Exponential Distribution.]</p>
@@ -210,7 +204,7 @@ multiplicative distortion would still give us an Exponential Distribution.]</p>
 events are more likely after some time. If $\gamma < 1$, events are more likely to occur early.       
 (<a href="#casella:berger">casella:berger, p 103</a>)</p>
 
-<p>Distribution: Weibull$(\gamma, \lambda, x)$.</p>
+<p><em>Distribution</em>: Weibull$(\gamma, \lambda, x)$.</p>
 
 <p></div></p>
 
@@ -221,13 +215,13 @@ events are more likely after some time. If $\gamma < 1$, events are more likely 
 
 <p><div class="h2d"><a name="betafromuniform"></a><h6>The $N$th largest draw from a Uniform</h6><p>
         
-Narrative: The first <em>order statistic</em> of a set of numbers $x$ is the smallest number in the
+<em>Narrative</em>: The first <em>order statistic</em> of a set of numbers $x$ is the smallest number in the
 set; the second is the next-to-smallest, up to the largest order statistic, which
 is $\max(x)$.</p>
 
 <p>The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ Distribution.</p>
 
-<p>Distribution: The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ Distribution.</p>
+<p><em>Distribution</em>: The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ Distribution.</p>
 
 <p></div></p>
 
@@ -238,10 +232,10 @@ is $\max(x)$.</p>
 
 <p><div class="h2d"><a name="uniform"></a><h6>Everything is equally likely</h6><p>
         
-Narrative: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
+<em>Narrative</em>: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
 range is as likely as any other draw within that range.</p>
 
-<p>Distribution: Uniform$(l, u)$</p>
+<p><em>Distribution</em>: Uniform$(l, u)$</p>
 
 <p></div></p>
 
