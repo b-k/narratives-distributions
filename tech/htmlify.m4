@@ -38,7 +38,7 @@ Distribution: $4
 </div>|>)
 
 define_blind(Citet, <|<a href="#$1">$2</a>|>)
-define_blind(Citep, <|(<a href="#$1">$1</a>)|>)
+define_blind(Citep, <|(<a href="#$1">$1<||>m4_ifelse($2,<||>,<||>,<|, $2|>)</a>)|>)
 
 define_blind(Link, <|<a href="$1">m4_shift($*)</a>|>)
 

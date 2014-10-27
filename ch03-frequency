@@ -23,13 +23,17 @@ Spatial version: $\lambda$ events per spatial unit. What is the likelihood that 
 Gamma$(k, \lambda)(x)$
 )
 
-Comment(
-N2D(Wait until a success, but success odds change~~weibull~~
-Events occur via a Ref(Poisson~~poisson)-like process ($\lambda$ events per time/space span), but the rate $\lambda$ changes with time.
-What is the likelihood that the first event will occur within $x$ periods?
+N2D(<|Wait until a success, but time scale is not even or success odds change|>~~weibull~~
+Events occur via a Ref(Poisson~~poisson)-like process ($\lambda$ events per time/space span), 
+so the likelihood of observing an event within $x$ periods is Exponential$(\lambda)(x)$.
+But the time scale is distorted, so $y=x^{1/\gamma}$. [Note that an additive or
+multiplicative distortion would still give us an Exponential distribution.]
+
+Another way to describe this is that the event rate is  changing with time. If $\gamma > 1$,
+events are more likely after some time. If $\gamma < 1$, events are more likely to occur early.       
+Citep(casella:berger~~ p 103)
 ~~
-Exponential$(\lambda)(x)$
-)
+Weibull$(\gamma, \lambda)(x)$.
 )
 
 N2D(Events per period~~poisson~~

@@ -13,7 +13,7 @@ define_blind(bf, <|{\bf $*}|>)
 define_blind(em, <|{\em $*}|>)
 
 define_blind(Citet, <|\citet{$1}|>)
-define_blind(Citep, <|\citep{$1}|>)
+define_blind(Citep, <|\citep<||>m4_ifelse($2,<||>,<||>,<|[$2]|>){$1}|>)
 
 define_blind(TitleDate, <|\titledate{$1}{$2}|>)
 define_blind(TeX, <|$*|>)
