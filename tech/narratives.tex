@@ -1,0 +1,110 @@
+\documentclass{book}
+\usepackage{url,calc,array, html, ifthen,graphicx, epsfig,natbib,times,xspace,soul,listings}
+%\usepackage[margin=1cm]{caption}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace,amsmath, amsfonts}  %for mathbb
+\usepackage[format=hang]{caption}
+
+%\usepackage[left=1.5in, right=1.5in]{geometry}
+
+%remove ugly boxes from pdf-embedded links.
+\usepackage{hyperref,xcolor}
+\hypersetup{%
+      colorlinks=false,% hyperlinks will be black
+            linkbordercolor=black,% hyperlink borders will be red
+              pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
+}
+
+\lstset{columns=fullflexible, basicstyle=\small, emph={size_t,apop_data,apop_model,gsl_vector,gsl_matrix,gsl_rng,FILE},emphstyle=\bfseries}
+
+
+\def\abox#1#2{\vbox{\hbox{\rotatebox{-90}{\scalebox{#1}{\includegraphics{#2}}}} }}
+
+%1: scaling on paper
+%2: postscript filename
+%3: paper caption
+%4: html filename
+%5: html alt tag---mandatory!
+%6: html caption.
+\long\def\blogimage#1#2#3#4#5#6{
+    \latexhtml{
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{cc}
+\abox{#1}{book/pix/#2}
+\end{tabular}
+
+\caption{#3}
+\label{classrankfig}
+\end{center}
+\end{figure}
+    }{
+\hrule
+\htmladdimg[alt="#5"]{#4}\\
+#6
+\hrule
+    }
+}
+
+%1: tex label
+%2: scaling on paper
+%3: filename
+%4: html location
+%5: caption
+%6: html alt tag---mandatory!
+\long\def\blogpic#1#2#3#4#5#6{
+    \latexhtml{
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{cc}
+\rotatebox{90}{\abox{#2}{book/pix/#3}}
+\end{tabular}
+
+\caption{#5}\label{#1}
+\end{center}
+\end{figure}
+    }{
+\hrule
+\htmladdimg[alt="#6"]{#4}\\
+\HTMLcode[class="caption"]{SPAN}{#5}
+\hrule
+    }
+}
+
+\long\def\blogimagenospin#1#2#3#4#5#6{
+    \latexhtml{
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{cc}
+\rotatebox{90}{\abox{#1}{book/pix/#2}}
+\end{tabular}
+
+\caption{#3}
+\end{center}
+\end{figure}
+    }{
+\htmladdimg[alt="#5"]{#4}\\
+#6
+    }
+}
+
+\def\link#1#2{\latexhtml{#1\footnote{\url{#2}}}{\htmladdnormallink{#1}{#2}}}
+
+
+\begin{document}
+\renewcommand{\comment}[1]{}
+\title{A Table of Narratives and Generated Distributions}
+\maketitle
+
+
+\tableofcontents
+\input ch01-intro.tex
+\input ch02-aggregation.tex
+\input ch03-frequency.tex
+\input ch04-order.tex
+\input ch05-other.tex
+
+\bibliographystyle{plainnat}
+\bibliography{../../narratives}
+
+\end{document}

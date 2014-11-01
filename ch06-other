@@ -1,0 +1,8 @@
+Chapter(Other)
+
+N2D(Everything is equally likely~~uniform~~
+We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
+range is as likely as any other draw within that range.
+~~
+Uniform$(l, u)$
+)
