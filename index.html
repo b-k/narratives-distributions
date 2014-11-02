@@ -65,7 +65,9 @@ down as many narratives as possible, and leave the estimation details to the ref
 <em>Narrative</em>: The coin-flip: one event occurs with probability $p$.</p>
 
 <p><em>Distribution</em>: This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
-probability $1-p$. The variance of a Bernoulli Distribution is $p(1-p)$.</p>
+probability $1-p$.</p>
+
+<p><em>Notes</em>: The variance of a Bernoulli Distribution is $p(1-p)$.</p>
 
 <p></div></p>
 
@@ -73,8 +75,9 @@ probability $1-p$. The variance of a Bernoulli Distribution is $p(1-p)$.</p>
         
 <em>Narrative</em>: Draw $N$ events with probability $p$.</p>
 
-<p><em>Distribution</em>: The Binomial$(N, p)$ Distribution.
-The mean is $Np$ and the variance is $Np(1-p)$.</p>
+<p><em>Distribution</em>: The Binomial$(N, p)$ Distribution.</p>
+
+<p><em>Notes</em>: The mean is $Np$ and the variance is $Np(1-p)$.</p>
 
 <p></div></p>
 
@@ -116,8 +119,20 @@ Report the mean of those draws.</p>
 Make a large series of independent, identically distributed (iid) draws from a source.
 Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
-<p><em>Distribution</em>: As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
-(<a href="#klemens:modeling">klemens:modeling</a>)</p>
+<p><em>Distribution</em>: As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with
+mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That
+is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$
+indicate the mean and standard deviation of the log.  (<a href="#klemens:modeling">klemens:modeling</a>)</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="rayleigh"></a><h6>Orthogonal components are Normally distributed </h6><p>
+        
+<em>Narrative</em>: On one axis, we have a series of iid draws, which generates a ${\cal N}(0, \sigma)$
+distribution. On an orthogonal axis, another series of iid draws also generates a ${\cal N}(0, \sigma)$ distribution.
+The observed scalar output $x$ is the magnitude of the resulting vector ($x=\sqrt{d_1^2+d_2^2}$).</p>
+
+<p><em>Distribution</em>: <a href="https://en.wikipedia.org/wiki/Rayleigh_distribution">Rayleigh</a>$(\sigma, x)$ distribution</p>
 
 <p></div></p>
 
@@ -173,12 +188,14 @@ probability that there will be $t$ events in a single span?</p>
 
 <p><h2>Continuous</h2><p></p>
 
-<p><div class="h2d"><a name="eponential"></a><h6>Wait until a success</h6><p>
+<p><div class="h2d"><a name="exponential"></a><h6>Wait until a success</h6><p>
         
 <em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?</p>
 
 <p><em>Distribution</em>: Exponential$(\lambda, x)$</p>
+
+<p><em>Notes</em>: The distribution is memoryless: after the first event, the time to the next event is also Exponentially distributed.</p>
 
 <p></div></p>
 
@@ -222,6 +239,46 @@ is $\max(x)$.</p>
 <p>The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ Distribution.</p>
 
 <p><em>Distribution</em>: The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ Distribution.</p>
+
+<p></div></p>
+
+<p></P>
+
+<P>
+<h1>Compounds</h1><p></p>
+
+<p><div class="h2d"><a name="pareto"></a><h6>Exponentiation of a wait for Poisson 
+        </h6><p>
+        
+<em>Narrative</em>: The density of events is via <a href="#poisson">Poisson</a> process, so span lenghts without events ($s$) are <a href="#exponential">Exponentially</a> distributed, with parameter $\lambda$.
+What is the distribution of $\exp(s)$?
+Because $s\geq 0$, $\exp(sl)$ will be $\geq 1$, so
+we may need to rescale so that the distribution is bounded below by $x_m$.</p>
+
+<p><em>Distribution</em>: Pareto$(x_m, \lambda)$</p>
+
+<p><em>Notes</em>: As with any continuous distribution with a bounded lower support, there exists some
+pivot $x%$ such that $(1-x)%$ of the density in an observed set of draws is expected to be above $x%$ (e.g., 1% of the population
+holds 99% of the wealth). But given this pivot $x$, $1-x^y%$ of the density is above
+$x^y%$, for all $y>0$. This property makes it popular for modeling income distributions.</p>
+
+<p>The Pareto inherits the memoryless property from the Exponential. Given a Pareto$(x_1,
+\lambda)$ distribution, the portion greater than $x_2$ has a Pareto$(x_2, \lambda)$
+distribution.</p>
+
+<p></div></p>
+
+<p></P>
+
+<P>
+<h1>Other</h1><p></p>
+
+<p><div class="h2d"><a name="uniform"></a><h6>Everything is equally likely</h6><p>
+        
+<em>Narrative</em>: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
+range is as likely as any other draw within that range.</p>
+
+<p><em>Distribution</em>: Uniform$(l, u)$</p>
 
 <p></div></p>
 
