@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  <link rel="stylesheet" href="typical.css" type="text/css" >
      <title>A Table of Narratives and Generated Distributions</title>
 
@@ -40,7 +41,7 @@ those too may have closed-form shortcuts that save you the trouble of writing do
 open-form simulation. Your final model may wind up being a combination of closed-form
 submodels.</p>
 
-<p>Little, if any, of this is novel, and every narrative-to-distribution should have a
+<p>None of this is novel, and every narrative-to-distribution should have a
 reference to an existing work, (including Wikipedia, because this is uncontroversial,
 textbook stuff). However, it is being presented in what seems to be a novel way, to
 facilitate the development of detailed micro-level narratives using known bulding
@@ -53,10 +54,16 @@ provide proofs here, unless they are useful for elucidating the transformation.<
 small $N$. We may add these notes later, but at this stage it would be nice to just get
 down as many narratives as possible, and leave the estimation details to the references.</p>
 
+<p>$\def\Re{{\mathbb R}}
+        \def\datas{{\mathbb D}}
+        \def\params{{\mathbb P}}
+        \def\models{{\mathbb M}}
+        \def\mod#1{M_{#1}}$</p>
+
 <p></P>
 
 <P>
-<h1>Aggregation</h1><p></p>
+<h1>Draws from a population</h1><p></p>
 
 <p><h2>Coin flips and die rolls</h2><p></p>
 
@@ -98,6 +105,18 @@ outcomes?</p>
 What are the odds that we get $x$ successes from $n$ draws without replacement?</p>
 
 <p><em>Distribution</em>: Negative binomial$(s, f, n, x)$</p>
+
+<p></div></p>
+
+<p><div class="h2d"><a name="betabinom"></a><h6>Draws with super-replacement </h6><p>
+        
+<em>Narrative</em>: [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
+then return it and a duplicate to the urn (so if you draw a white ball, put that and
+another white ball back). Repeat $n$ times; report the count of white balls.</p>
+
+<p><em>Distribution</em>: Beta-binomial$(n, \alpha, \beta, x)$</p>
+
+<p><em>Notes</em>: This is the posterior distribution from updating with a Beta distribution and a Binomial likelihood. </p>
 
 <p></div></p>
 
