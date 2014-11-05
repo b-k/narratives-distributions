@@ -38,9 +38,11 @@ define_blind(Pic, <|\begin{figure}[htb]
 \end{figure}
 |>)
 
-define_blind(Chapter, <|\chapter{$*}|>)
-define_blind(Section, <|\section{$*}|>)
-define_blind(Subsection, <|\subsection{$*}|>)
+After converting from book format to article format, I downgraded
+the first three section types [chapter -> section; section->subsection...]
+define_blind(Chapter, <|\section{$*}|>)
+define_blind(Section, <|\subsection{$*}|>)
+define_blind(Subsection, <|\subsubsection{$*}|>)
 define_blind(Paragraph, <|\paragraph{$*}|>)
 define_blind(Link, <|\link{m4_shift($*)}{$1}|>)
 
@@ -53,6 +55,8 @@ define_blind(N2D, <|\paragraph{$1}\label{m4_translit(<|$2|>, '
 Narrative: $3
 
 Distribution: $4
+
+m4_ifelse(<|$5|>, <||>,,<|Notes: $5|>)
 
 |>)
 

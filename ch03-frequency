@@ -9,6 +9,7 @@ first event will occur at period $x$? Citep(goswami:rao~~p 9)
 Link(https://en.wikipedia.org/wiki/Geometric_distribution~~Geometric)$(p, x)$
 )
 
+Comment(How about the geometric-poisson?  https://en.wikipedia.org/wiki/Geometric_Poisson_distribution)
 
 N2D(Wait until $k$ successes~~negbinom~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that we will have to wait
@@ -42,11 +43,13 @@ Poisson$(\lambda, t)$
 
 Section(Continuous)
 
-N2D(Wait until a success~~eponential~~
+N2D(Wait until a success~~exponential~~
 Events occur via a Ref(Poisson~~poisson) process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?
 ~~
 Exponential$(\lambda, x)$
+~~
+The distribution is memoryless: after the first event, the time to the next event is also Exponentially distributed.
 )
 
 N2D(Wait until $k$ successes~~gamma~~

@@ -3,7 +3,7 @@
 pdf:
 	mkdir -p out
 	for f in ../ch* ; do \
-		sed 's/,/<|,|>/g' $$f | sed 's/~~/,/g' | m4 -P textify.m4  - | sed -e 's/æ/\\ae{}/g' -e 's/ô/\\^o/g' \
+		sed 's/,/<|,|>/g' $$f | sed 's/~~/,/g' | m4 -P textify.m4  - | sed -e 's/æ/\\ae{}/g' -e "s/ó/\\\\'o/g" -e 's/ô/\\^o/g' \
 	-e 's/…/.../g' -e 's/œ/\\oe{}/g' -e 's/&gt;/>/' -e 's/&lt;/</' > out/`basename $$f .tex`.tex ; done
 	cp narratives.tex out
 	cd out && pdflatex narratives

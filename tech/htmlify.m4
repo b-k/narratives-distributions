@@ -32,9 +32,11 @@ define_blind(Ref, <|<a href="#<||>m4_translit(<|$2|>, '
 define_blind(N2D, <|<div class="h2d"><a name="<||>m4_translit(<|$2|>, ' 	
 ')"></a>Paragraph($1)
         
-Narrative: $3
+<em>Narrative</em>: $3
 
-Distribution: $4
+<em>Distribution</em>: $4
+
+m4_ifelse(<|$5|>, <||>,,<|<em>Notes</em>: $5|>)
 </div>|>)
 
 define_blind(Citet, <|<a href="#$1">$2</a>|>)

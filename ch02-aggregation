@@ -1,19 +1,21 @@
 Chapter(Aggregation)
 
-
 Section(Coin flips and die rolls)
 
 N2D(Draws from a binary option ~~bernie~~
 The coin-flip: one event occurs with probability $p$.
 ~~
 This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
-probability $1-p$. The variance of a Bernoulli Distribution is $p(1-p)$.
+probability $1-p$.
+~~
+The variance of a Bernoulli Distribution is $p(1-p)$.
 )
 
 N2D(Multiple draws from a binary option ~~binom~~
 Draw $N$ events with probability $p$.
 ~~
 The Binomial$(N, p)$ Distribution.
+~~
 The mean is $Np$ and the variance is $Np(1-p)$.
 )
 
@@ -33,6 +35,16 @@ What are the odds that we get $x$ successes from $n$ draws without replacement?
 Negative binomial$(s, f, n, x)$
 )
 
+N2D(Draws with super-replacement ~~betabinom~~
+[The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
+then return it and a duplicate to the urn (so if you draw a white ball, put that and
+another white ball back). Repeat $n$ times, report the count of white balls.
+~~
+Beta-binomial$(n, \alpha, \beta, x)$
+~~
+This is the posterior distribution from updating with a Beta distribution and a Binomial likelihood. 
+)
+
 Section(Central Limit Theorems)
 
 N2D(Mean of univariate iid observations ~~clt~~
@@ -43,13 +55,21 @@ As $N\to\infty$, the distribution of repeated means will be a Normal Distributio
 Citep(klemens:modeling)
 )
 
-
 N2D(Product of univariate iid observations ~~clt~~
 Begin with a value $x$.
 Make a large series of independent, identically distributed (iid) draws from a source.
 Report the product, $x\cdot d_1 \cdot d_2 ...$.
 ~~
-As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$ indicate the mean and standard deviation of the log.
-Citep(klemens:modeling)
+As $N\to\infty$, the distribution of products will be a Lognormal Distribution, with
+mean $\mu=\ln(x) +(\sum_i \ln(d_i))/N$ and $\sigma = \sum_i (\ln(d_i)-\mu)^2/N$. That
+is, the log of the products will be Normally distributed, and $\mu$ and $\sigma$
+indicate the mean and standard deviation of the log.  Citep(klemens:modeling)
 )
 
+N2D(Orthogonal components are Normally distributed ~~rayleigh~~
+On one axis, we have a series of iid draws, which generates a ${\cal N}(0, \sigma)$
+distribution. On an orthogonal axis, another series of iid draws also generates a ${\cal N}(0, \sigma)$ distribution.
+The observed scalar output $x$ is the magnitude of the resulting vector ($x=\sqrt{d_1^2+d_2^2}$).
+~~
+Link(https://en.wikipedia.org/wiki/Rayleigh_distribution~~Rayleigh)$(\sigma, x)$ distribution
+)

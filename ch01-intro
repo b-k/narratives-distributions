@@ -21,7 +21,7 @@ those too may have closed-form shortcuts that save you the trouble of writing do
 open-form simulation. Your final model may wind up being a combination of closed-form
 submodels.
 
-Little, if any, of this is novel, and every narrative-to-distribution should have a
+None of this is novel, and every narrative-to-distribution should have a
 reference to an existing work, (including Wikipedia, because this is uncontroversial,
 textbook stuff). However, it is being presented in what seems to be a novel way, to
 facilitate the development of detailed micro-level narratives using known bulding
@@ -44,7 +44,9 @@ HTML($\def\Re{{\mathbb R}}
         \def\models{{\mathbb M}}
         \def\mod#1{M_{#1}}$)
 
-Paragraph(Notation) The Normal distribution is a mapping of the form $f:(\mu, \sigma, x)
+Comment(
+Paragraph(A note on notation)
+The Normal distribution is a mapping of the form $f:(\mu, \sigma, x)
 \to \Re^+$. We could also fix $\mu$ and $\sigma$, which produces a univariate function
 $f:x\to\Re^+$, which makes use of a meta-function of the form $N:(\mu, \sigma) \to
 (f:x\to\Re^+)$. Textbooks (and Wikipedia) often characterize ``the Gaussian distribution''
@@ -64,3 +66,4 @@ fixing $\mu=3$ and $\sigma=2$ (for example) produces a single Gaussian distribut
 often notated with something like ${\cal N}(3, 2)$, with the understanding that this
 is a univariate function $x\to\Re^+$.  In the notation here, that distribution would
 be written as ${\cal N}(3, 2, x)$.
+)
