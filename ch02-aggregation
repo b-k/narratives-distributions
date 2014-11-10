@@ -1,4 +1,4 @@
-Chapter(Aggregation)
+Chapter(Draws from a population)
 
 Section(Coin flips and die rolls)
 
@@ -38,7 +38,7 @@ Negative binomial$(s, f, n, x)$
 N2D(Draws with super-replacement ~~betabinom~~
 [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
 then return it and a duplicate to the urn (so if you draw a white ball, put that and
-another white ball back). Repeat $n$ times, report the count of white balls.
+another white ball back). Repeat $n$ times; report the count of white balls.
 ~~
 Beta-binomial$(n, \alpha, \beta, x)$
 ~~

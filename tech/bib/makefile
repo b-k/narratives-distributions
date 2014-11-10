@@ -17,7 +17,7 @@ bib:
 	-bibtex $b
 	sed -e "/thebibliography/d"  < $b.bbl | \
 	tr -d '\n' | \
-	sed -e 's/\\bibitem[^]]*]{\([^}]*\)}/<\/p><p> [<a href="\#\1">\1<\/a>] /g' -e "s/\\newblock//g" \
+	sed -e 's/\\bibitem[^]]*]{\([^}]*\)}/<\/p><p> [<a name="\1">\1<\/a>] /g' -e "s/\\newblock//g" \
 		-e 's/\\newblock//g' -e "s/~/ /g" -e"s|\\\\/||g"		\
 		-e 's/\%\([^ \t\n]\)/\1/g'		\
 		-e 's/{\\em \([^}]*\)}/<em>\1<\/em>/g'  \

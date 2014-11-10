@@ -44,6 +44,21 @@ HTML($\def\Re{{\mathbb R}}
         \def\models{{\mathbb M}}
         \def\mod#1{M_{#1}}$)
 
+bf(Q: Where's the $\chi^2$ distribution?) Given a series of $n$ Normally distributed
+variables, the sum of their squares has a $\chi^2_n$ Distribution. So one could
+conceivably describe a micro-level narrative that produces a $\chi^2$ outcome based
+on the Normal narrative, but it is a rather convoluted storyline: start with $n$
+iid sets, make distinct pools of draws from each of them, take their separate means,
+take the square of each mean, then sum the squares. Here is Citet(kmenta~~Kmenta) on
+the implausibility of this storyline: ``There are no noted parent populations whose
+distributions could be described by the chi-squared distribution.'' The process by which a
+$\chi^2$ Distribution is generated is therefore best described as a transformation of
+existing distributions, not as a micro-level narrative.
+
+This list will not cover methods by which one distribution can be transformed into
+another. Stats textbooks and Wikipedia do a fine job on transforming distributions to
+other distributions, so we leave that level of work out of scope.
+
 Comment(
 Paragraph(A note on notation)
 The Normal distribution is a mapping of the form $f:(\mu, \sigma, x)

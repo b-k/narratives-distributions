@@ -15,7 +15,7 @@ define_blind(mm, <|<div class="math">$*</div>|>)
 define_blind(tt, <|<tt>$*</tt>|>)
 define_blind(Tt, <|<tt>$*</tt>|>)
 define_blind(sc, <|<sc>$*</sc>|>)
-define_blind(bf, <|<bf>$*</bf>|>)
+define_blind(bf, <|<b>$*</b>|>)
 define_blind(em, <|<em>$*</em>|>)
 
 define_blind(Chapter, <|<h1>$*</h1><p>|>)
