@@ -29,6 +29,7 @@ N2D(one narrative~~narrativedescription~~
     ∙ A tag, for cross-references. Avoid punctuation, so this can be TeX- and HTML-friendly
     ∙ The narrative
     ∙ The distribution
+    ∙ An optional discussion
     )
     ~~ These elements are separated by the double-tilde you see here. The goal was a
     separator that won't appear in plain text, is easy to type with a standard keyboard,
