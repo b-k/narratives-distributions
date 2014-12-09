@@ -7,5 +7,5 @@ is $\max(x)$.
 
 The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ Distribution.
 ~~
-The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ Distribution.
+Let $a$ be the possible values of the $\alpha$th order statistic; then $a$ has a Beta$(\alpha,\beta, a)$ Distribution.
 )

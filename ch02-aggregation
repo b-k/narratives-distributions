@@ -3,7 +3,9 @@ Chapter(Draws from a population)
 Section(Coin flips and die rolls)
 
 N2D(Draws from a binary option ~~bernie~~
-The coin-flip: one event occurs with probability $p$.
+The coin-flip: one hit occurs with probability $p$.
+Comment(Am using hit/miss instead of the more judgmental success/failure. When we have
+    narratives about parts failing and people dying, it seems odd to call that a success.)
 ~~
 This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
 probability $1-p$.
@@ -12,11 +14,11 @@ The variance of a Bernoulli Distribution is $p(1-p)$.
 )
 
 N2D(Multiple draws from a binary option ~~binom~~
-Draw $N$ events with probability $p$.
+Make $N$ draws, each of which hits with probability $p$.
 ~~
-The Binomial$(N, p)$ Distribution.
+The hit count $x$ has a Binomial$(N, p, x)$ Distribution.
 ~~
-The mean is $Np$ and the variance is $Np(1-p)$.
+The mean of $x$ is $Np$ and the variance is $Np(1-p)$.
 )
 
 N2D(Draws from a more-than-binary option ~~bernie~~
@@ -25,20 +27,20 @@ probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event ha
 $\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
 outcomes?
 ~~
-Multinomial$(n, {\bf p})$.
+Multinomial$(n, {\bf p}, k)$.
 )
 
 N2D(Draws without replacement ~~negbinom~~
-Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
-What are the odds that we get $x$ successes from $n$ draws without replacement?
+Start with a pool of $h$ hits and $m$ misses, so $N=h+m$, and the Bernoulli $p=h/N$.
+What are the odds that we get $x$ hits from $n$ draws without replacement?
 ~~
-Negative binomial$(s, f, n, x)$
+Negative binomial$(h, m, n, x)$
 )
 
 N2D(Draws with super-replacement ~~betabinom~~
 [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
 then return it and a duplicate to the urn (so if you draw a white ball, put that and
-another white ball back). Repeat $n$ times; report the count of white balls.
+another white ball back in the urn). Repeat $n$ times; report the count of white balls.
 ~~
 Beta-binomial$(n, \alpha, \beta, x)$
 ~~

@@ -4,7 +4,7 @@ Section(Discrete)
 
 N2D(Wait until one success~~geometric~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that the
-first event will occur at period $x$? Citep(goswami:rao~~p 9)
+first hit will occur at period $x$? Citep(goswami:rao~~p 9)
 ~~
 Link(https://en.wikipedia.org/wiki/Geometric_distribution~~Geometric)$(p, x)$
 )
@@ -13,7 +13,7 @@ Comment(How about the geometric-poisson?  https://en.wikipedia.org/wiki/Geometri
 
 N2D(Wait until $k$ successes~~negbinom~~
 One Ref(Bernoulli~~bernie) (coin-flip) draw per period. What is the likelihood that we will have to wait
-$x$ draws before we observe $k$ successes?
+$x$ draws before we observe $k$ hits?
 ~~
 Link(http://en.wikipedia.org/wiki/Negative_binomial_distribution~~Negative binomial)$(k, p, x)$
 )
