@@ -54,7 +54,7 @@ For an in-text journal/book/reference citation:
     Citet(fay:herriot~~Fay and Herriot). 
 The second argument is text for the HTML version; BibTeX autogenerates the right text for the PDF.
 
-Put your citations in BibTeX format in ppim.bib.
+Put your citations in BibTeX format in narratives.bib.
 
 
 Items(
