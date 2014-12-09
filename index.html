@@ -110,16 +110,16 @@ probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event ha
 $\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
 outcomes?</p>
 
-<p><em>Distribution</em>: Multinomial$(n, {\bf p})$.</p>
+<p><em>Distribution</em>: Multinomial$(n, {\bf p}, k)$.</p>
 
 <p></div></p>
 
 <p><div class="h2d"><a name="negbinom"></a><h6>Draws without replacement </h6><p>
         
-<em>Narrative</em>: Start with a pool of $s$ successes and $f$ failures, so $N=s+f$, and the Bernoulli $p=s/N$.
-What are the odds that we get $x$ successes from $n$ draws without replacement?</p>
+<em>Narrative</em>: Start with a pool of $h$ hits and $m$ misses, so $N=h+m$, and the Bernoulli $p=h/N$.
+What are the odds that we get $x$ hits from $n$ draws without replacement?</p>
 
-<p><em>Distribution</em>: Negative binomial$(s, f, n, x)$</p>
+<p><em>Distribution</em>: Negative binomial$(h, m, n, x)$</p>
 
 <p></div></p>
 
@@ -127,7 +127,7 @@ What are the odds that we get $x$ successes from $n$ draws without replacement?<
         
 <em>Narrative</em>: [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
 then return it and a duplicate to the urn (so if you draw a white ball, put that and
-another white ball back). Repeat $n$ times; report the count of white balls.</p>
+another white ball back in the urn). Repeat $n$ times; report the count of white balls.</p>
 
 <p><em>Distribution</em>: Beta-binomial$(n, \alpha, \beta, x)$</p>
 
@@ -180,7 +180,7 @@ The observed scalar output $x$ is the magnitude of the resulting vector ($x=\sqr
 <p><div class="h2d"><a name="geometric"></a><h6>Wait until one success</h6><p>
         
 <em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
-first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
+first hit will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
 
 <p><em>Distribution</em>: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p, x)$</p>
 
@@ -189,7 +189,7 @@ first event will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</
 <p><div class="h2d"><a name="negbinom"></a><h6>Wait until $k$ successes</h6><p>
         
 <em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
-$x$ draws before we observe $k$ successes?</p>
+$x$ draws before we observe $k$ hits?</p>
 
 <p><em>Distribution</em>: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p, x)$</p>
 
@@ -272,7 +272,7 @@ is $\max(x)$.</p>
 
 <p>The $\alpha+\beta-1$ elements of $x$ are drawn from a Uniform$[0, 1]$ Distribution.</p>
 
-<p><em>Distribution</em>: The $\alpha$th order statistic has a Beta$(\alpha,\beta)$ Distribution.</p>
+<p><em>Distribution</em>: Let $a$ be the possible values of the $\alpha$th order statistic; then $a$ has a Beta$(\alpha,\beta, a)$ Distribution.</p>
 
 <p></div></p>
 
@@ -286,14 +286,14 @@ is $\max(x)$.</p>
         
 <em>Narrative</em>: The density of events is via <a href="#poisson">Poisson</a> process, so span lenghts without events ($s$) are <a href="#exponential">Exponentially</a> distributed, with parameter $\lambda$.
 What is the distribution of $\exp(s)$?
-Because $s\geq 0$, $\exp(sl)$ will be $\geq 1$, so
-we may need to rescale so that the distribution is bounded below by $x_m$.</p>
+Because $s\geq 0$, $\exp(s)$ will be $\geq 1$, so if $x_m$ periods have already passed,
+we will need to rescale so that the distribution is bounded below by $x_m$.</p>
 
 <p><em>Distribution</em>: Pareto$(x_m, \lambda)$</p>
 
 <p><em>Notes</em>: As with any continuous distribution with a bounded lower support, there exists some
 pivot $x%$ such that $(1-x)%$ of the density in an observed set of draws is expected to be above $x%$ (e.g., 1% of the population
-holds 99% of the wealth). But given this pivot $x$, $1-x^y%$ of the density is above
+holds 99% of the wealth). Given this pivot $x$, $1-x^y%$ of the Pareto's density is above
 $x^y%$, for all $y>0$. This property makes it popular for modeling income distributions.</p>
 
 <p>The Pareto inherits the memoryless property from the Exponential. Given a Pareto$(x_1,
