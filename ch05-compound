@@ -1,0 +1,22 @@
+Chapter(Compounds)
+
+
+N2D(Exponentiation of a wait for Poisson 
+        ~~pareto
+~~The density of events is via Ref(Poisson~~poisson) process, so span lenghts without events ($s$) are Ref(Exponentially~~exponential) distributed, with parameter $\lambda$.
+What is the distribution of $\exp(s)$?
+Because $s\geq 0$, $\exp(s)$ will be $\geq 1$, so if $x_m$ periods have already passed,
+we will need to rescale so that the distribution is bounded below by $x_m$.
+~~
+Pareto$(x_m, \lambda)$
+~~
+As with any continuous distribution with a bounded lower support, there exists some
+pivot $x\%$ such that $(1-x)\%$ of the density in an observed set of draws is expected to be above $x\%$ (e.g., 1\% of the population
+holds 99\% of the wealth). Given this pivot $x$, $1-x^y\%$ of the Pareto's density is above
+$x^y\%$, for all $y>0$. This property makes it popular for modeling income distributions.
+
+The Pareto inherits the memoryless property from the Exponential. Given a Pareto$(x_1,
+\lambda)$ distribution, the portion greater than $x_2$ has a Pareto$(x_2, \lambda)$
+distribution.
+
+)
