@@ -17,7 +17,7 @@ If you wanted to write a simulation, in which individual agents each experience 
 shock and their mean level is measured and reported, this wonderful piece of mathematics
 just saved you the trouble.
 
-Now you can focus your energeies on the more novel parts of the storyline. Of course,
+Now you can focus your energies on the more novel parts of the storyline. Of course,
 those too may have closed-form shortcuts that save you the trouble of writing down an
 open-form simulation. Your final model may wind up being a combination of closed-form
 submodels.
