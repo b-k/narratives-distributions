@@ -1,31 +1,34 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+</p>
+
+<p><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- <link rel="stylesheet" href="typical.css" type="text/css" >
-     <title>A Table of Narratives and Generated Distributions</title>
+     <title>A Table of Narratives and Generated Distributions</title></p>
 
-
-<!-- LaTeX math -->
+<p><!-- LaTeX math -->
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
       processEscapes: true}});
-</script>
+</script></p>
 
-     </head><body>
-     <h1>A Table of Narratives and Generated Distributions</h1>
+<p> <link rel="stylesheet" href="typical.css" type="text/css" ></p>
 
+<p>     </head><body>
+     <h1>A Table of Narratives and Generated Distributions</h1></p>
 
-<P>
-This project lists open-form narratives and the closed-form distributions that
+<p>        
+        <P></p>
+
+<p>This project lists open-form narratives and the closed-form distributions that
 approximate them. Its intent is to help you build estimable statistical models on a sound
 micro-level foundation.</p>
 
 <p>Here is a simple example of going from a real-world situation to an estimable mathematical model:</p>
 
-<p><div class="h2d"><a name="samp"></a><h6>A sample narrative</h6><p>
-        
-<em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
+<p><div class="h2d"><a name="samp"></a><h6>A sample narrative</h6><p></p>
+
+<p><em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
 Take the mean of those draws.</p>
 
 <p><em>Distribution</em>: The distribution of repeated means will be a Normal distribution.</p>
@@ -75,16 +78,13 @@ existing distributions, not as a micro-level narrative.</p>
 another. Stats textbooks and Wikipedia do a fine job on transforming distributions to
 other distributions, so we leave that level of work out of scope.</p>
 
-<p></P>
-
-<P>
-<h1>Draws from a population</h1><p></p>
+<p><h1>Draws from a population</h1><p></p>
 
 <p><h2>Coin flips and die rolls</h2><p></p>
 
-<p><div class="h2d"><a name="bernie"></a><h6>Draws from a binary option </h6><p>
-        
-<em>Narrative</em>: The coin-flip: one hit occurs with probability $p$.</p>
+<p><div class="h2d"><a name="bernie"></a><h6>Draws from a binary option </h6><p></p>
+
+<p><em>Narrative</em>: The coin-flip: one hit occurs with probability $p$.</p>
 
 <p><em>Distribution</em>: This defines the Bernoulli Distribution, which is one with probability $p$ and zero with
 probability $1-p$.</p>
@@ -93,9 +93,9 @@ probability $1-p$.</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="binom"></a><h6>Multiple draws from a binary option </h6><p>
-        
-<em>Narrative</em>: Make $N$ draws, each of which hits with probability $p$.</p>
+<p><div class="h2d"><a name="binom"></a><h6>Multiple draws from a binary option </h6><p></p>
+
+<p><em>Narrative</em>: Make $N$ draws, each of which hits with probability $p$.</p>
 
 <p><em>Distribution</em>: The hit count $x$ has a Binomial$(N, p, x)$ Distribution.</p>
 
@@ -103,9 +103,9 @@ probability $1-p$.</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="bernie"></a><h6>Draws from a more-than-binary option </h6><p>
-        
-<em>Narrative</em>: The die-roll: each observation is from a list of possible outcomes, each with its own
+<p><div class="h2d"><a name="bernie"></a><h6>Draws from a more-than-binary option </h6><p></p>
+
+<p><em>Narrative</em>: The die-roll: each observation is from a list of possible outcomes, each with its own
 probability of occurring, ${\bf p} = [p_1, p_2, ..., p_k]$. Exactly one event happens each time, so 
 $\sum_{i=1}^k p_i = 1$. We make $n$ draws. What is the $k$-dimensional vector of observed
 outcomes?</p>
@@ -114,18 +114,18 @@ outcomes?</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="negbinom"></a><h6>Draws without replacement </h6><p>
-        
-<em>Narrative</em>: Start with a pool of $h$ hits and $m$ misses, so $N=h+m$, and the Bernoulli $p=h/N$.
+<p><div class="h2d"><a name="negbinom"></a><h6>Draws without replacement </h6><p></p>
+
+<p><em>Narrative</em>: Start with a pool of $h$ hits and $m$ misses, so $N=h+m$, and the Bernoulli $p=h/N$.
 What are the odds that we get $x$ hits from $n$ draws without replacement?</p>
 
 <p><em>Distribution</em>: Negative binomial$(h, m, n, x)$</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="betabinom"></a><h6>Draws with super-replacement </h6><p>
-        
-<em>Narrative</em>: [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
+<p><div class="h2d"><a name="betabinom"></a><h6>Draws with super-replacement </h6><p></p>
+
+<p><em>Narrative</em>: [The Pólya urn scheme] Start with a pool of $\alpha$ red and $\beta$ black balls. Draw a ball, note its color,
 then return it and a duplicate to the urn (so if you draw a white ball, put that and
 another white ball back in the urn). Repeat $n$ times; report the count of white balls.</p>
 
@@ -137,9 +137,9 @@ another white ball back in the urn). Repeat $n$ times; report the count of white
 
 <p><h2>Central Limit Theorems</h2><p></p>
 
-<p><div class="h2d"><a name="clt"></a><h6>Mean of univariate iid observations </h6><p>
-        
-<em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
+<p><div class="h2d"><a name="clt"></a><h6>Mean of univariate iid observations </h6><p></p>
+
+<p><em>Narrative</em>: Make a large series of independent, identically distributed (iid) draws from a source.
 Report the mean of those draws.</p>
 
 <p><em>Distribution</em>: As $N\to\infty$, the distribution of repeated means will be a Normal Distribution, with mean $\mu=\sum x/N$ and $\sigma = \sum (x-\mu)^2/N$. 
@@ -147,9 +147,9 @@ Report the mean of those draws.</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="clt"></a><h6>Product of univariate iid observations </h6><p>
-        
-<em>Narrative</em>: Begin with a value $x$.
+<p><div class="h2d"><a name="clt"></a><h6>Product of univariate iid observations </h6><p></p>
+
+<p><em>Narrative</em>: Begin with a value $x$.
 Make a large series of independent, identically distributed (iid) draws from a source.
 Report the product, $x\cdot d_1 \cdot d_2 ...$.</p>
 
@@ -160,44 +160,40 @@ indicate the mean and standard deviation of the log.  (<a href="#klemens:modelin
 
 <p></div></p>
 
-<p><div class="h2d"><a name="rayleigh"></a><h6>Orthogonal components are Normally distributed </h6><p>
-        
-<em>Narrative</em>: On one axis, we have a series of iid draws, which generates a ${\cal N}(0, \sigma)$
+<p><div class="h2d"><a name="rayleigh"></a><h6>Orthogonal components are Normally distributed </h6><p></p>
+
+<p><em>Narrative</em>: On one axis, we have a series of iid draws, which generates a ${\cal N}(0, \sigma)$
 distribution. On an orthogonal axis, another series of iid draws also generates a ${\cal N}(0, \sigma)$ distribution.
 The observed scalar output $x$ is the magnitude of the resulting vector ($x=\sqrt{d_1^2+d_2^2}$).</p>
 
 <p><em>Distribution</em>: <a href="https://en.wikipedia.org/wiki/Rayleigh_distribution">Rayleigh</a>$(\sigma, x)$ distribution</p>
 
-<p></div></p>
-
-<p></P>
-
-<P>
+<p></div>
 <h1>Wait times and frequency</h1><p></p>
 
 <p><h2>Discrete</h2><p></p>
 
-<p><div class="h2d"><a name="geometric"></a><h6>Wait until one success</h6><p>
-        
-<em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
+<p><div class="h2d"><a name="geometric"></a><h6>Wait until one success</h6><p></p>
+
+<p><em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that the
 first hit will occur at period $x$? (<a href="#goswami:rao">goswami:rao, p 9</a>)</p>
 
 <p><em>Distribution</em>: <a href="https://en.wikipedia.org/wiki/Geometric_distribution">Geometric</a>$(p, x)$</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="negbinom"></a><h6>Wait until $k$ successes</h6><p>
-        
-<em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
+<p><div class="h2d"><a name="negbinom"></a><h6>Wait until $k$ successes</h6><p></p>
+
+<p><em>Narrative</em>: One <a href="#bernie">Bernoulli</a> (coin-flip) draw per period. What is the likelihood that we will have to wait
 $x$ draws before we observe $k$ hits?</p>
 
 <p><em>Distribution</em>: <a href="http://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative binomial</a>$(k, p, x)$</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="markovgeometric"></a><h6>Markov chain stabilization</h6><p>
-        
-<em>Narrative</em>: A system is represented by a column vector of states ${\bf S}$, which
+<p><div class="h2d"><a name="markovgeometric"></a><h6>Markov chain stabilization</h6><p></p>
+
+<p><em>Narrative</em>: A system is represented by a column vector of states ${\bf S}$, which
 changes states according to a Markov matrix $P$. What is the likelihood that it
 will take $t$ steps to reach a steady state, where ${\bf S}_{t+1} = {\bf S}_t\cdot P = {\bf S}_t$?</p>
 
@@ -210,9 +206,9 @@ and $I$ and appropriately-sized identity matrix.
 
 <p></div></p>
 
-<p><div class="h2d"><a name="poisson"></a><h6>Events per period</h6><p>
-        
-<em>Narrative</em>: Independent events (rainy day, landmine, bad data) occur at the
+<p><div class="h2d"><a name="poisson"></a><h6>Events per period</h6><p></p>
+
+<p><em>Narrative</em>: Independent events (rainy day, landmine, bad data) occur at the
 mean rate of $\lambda$ events per span (of time, space, et cetera). What is the
 probability that there will be $t$ events in a single span?</p>
 
@@ -222,9 +218,9 @@ probability that there will be $t$ events in a single span?</p>
 
 <p><h2>Continuous</h2><p></p>
 
-<p><div class="h2d"><a name="exponential"></a><h6>Wait until a success</h6><p>
-        
-<em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
+<p><div class="h2d"><a name="exponential"></a><h6>Wait until a success</h6><p></p>
+
+<p><em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a> process ($\lambda$ events per time/space span).
 What is the likelihood that the first event will occur within $x$ periods?</p>
 
 <p><em>Distribution</em>: Exponential$(\lambda, x)$</p>
@@ -233,9 +229,9 @@ What is the likelihood that the first event will occur within $x$ periods?</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="gamma"></a><h6>Wait until $k$ successes</h6><p>
-        
-<em>Narrative</em>: Events are a <a href="#poisson">Poisson</a> process: $\lambda$ events per time period. What is the
+<p><div class="h2d"><a name="gamma"></a><h6>Wait until $k$ successes</h6><p></p>
+
+<p><em>Narrative</em>: Events are a <a href="#poisson">Poisson</a> process: $\lambda$ events per time period. What is the
 likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 
 <p>Spatial version: $\lambda$ events per spatial unit. What is the likelihood that we observe $x$ events over a distance or area of $k$ units?</p>
@@ -244,9 +240,9 @@ likleihood that we will observe $x$ events in a span of $k$ time units?</p>
 
 <p></div></p>
 
-<p><div class="h2d"><a name="weibull"></a><h6>Wait until a success, but time scale is not even or success odds change</h6><p>
-        
-<em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
+<p><div class="h2d"><a name="weibull"></a><h6>Wait until a success, but time scale is not even or success odds change</h6><p></p>
+
+<p><em>Narrative</em>: Events occur via a <a href="#poisson">Poisson</a>-like process ($\lambda$ events per time/space span), 
 so the likelihood of observing an event within $x$ periods is Exponential$(\lambda, x)$.
 But the time scale is distorted, so $y=x^{1/\gamma}$. [Note that an additive or
 multiplicative distortion would still give us an Exponential Distribution.]</p>
@@ -257,16 +253,12 @@ events are more likely after some time. If $\gamma < 1$, events are more likely 
 
 <p><em>Distribution</em>: Weibull$(\gamma, \lambda, x)$.</p>
 
-<p></div></p>
-
-<p></P>
-
-<P>
+<p></div>
 <h1>Order statistics</h1><p></p>
 
-<p><div class="h2d"><a name="betafromuniform"></a><h6>The $N$th largest draw from a Uniform</h6><p>
-        
-<em>Narrative</em>: The first <em>order statistic</em> of a set of numbers $x$ is the smallest number in the
+<p><div class="h2d"><a name="betafromuniform"></a><h6>The $N$th largest draw from a Uniform</h6><p></p>
+
+<p><em>Narrative</em>: The first <em>order statistic</em> of a set of numbers $x$ is the smallest number in the
 set; the second is the next-to-smallest, up to the largest order statistic, which
 is $\max(x)$.</p>
 
@@ -274,17 +266,13 @@ is $\max(x)$.</p>
 
 <p><em>Distribution</em>: Let $a$ be the possible values of the $\alpha$th order statistic; then $a$ has a Beta$(\alpha,\beta, a)$ Distribution.</p>
 
-<p></div></p>
-
-<p></P>
-
-<P>
+<p></div>
 <h1>Compounds</h1><p></p>
 
 <p><div class="h2d"><a name="pareto"></a><h6>Exponentiation of a wait for Poisson 
-        </h6><p>
-        
-<em>Narrative</em>: The density of events is via <a href="#poisson">Poisson</a> process, so span lenghts without events ($s$) are <a href="#exponential">Exponentially</a> distributed, with parameter $\lambda$.
+        </h6><p></p>
+
+<p><em>Narrative</em>: The density of events is via <a href="#poisson">Poisson</a> process, so span lenghts without events ($s$) are <a href="#exponential">Exponentially</a> distributed, with parameter $\lambda$.
 What is the distribution of $\exp(s)$?
 Because $s\geq 0$, $\exp(s)$ will be $\geq 1$, so if $x_m$ periods have already passed,
 we will need to rescale so that the distribution is bounded below by $x_m$.</p>
@@ -300,16 +288,12 @@ $x^y%$, for all $y>0$. This property makes it popular for modeling income distri
 \lambda)$ distribution, the portion greater than $x_2$ has a Pareto$(x_2, \lambda)$
 distribution.</p>
 
-<p></div></p>
-
-<p></P>
-
-<P>
+<p></div>
 <h1>Other</h1><p></p>
 
-<p><div class="h2d"><a name="uniform"></a><h6>Everything is equally likely</h6><p>
-        
-<em>Narrative</em>: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
+<p><div class="h2d"><a name="uniform"></a><h6>Everything is equally likely</h6><p></p>
+
+<p><em>Narrative</em>: We know the upper and lower bounds are $u$ and $l$, but believe that any draw within that
 range is as likely as any other draw within that range.</p>
 
 <p><em>Distribution</em>: Uniform$(l, u)$</p>
@@ -317,5 +301,6 @@ range is as likely as any other draw within that range.</p>
 <p></div></p>
 
 <p></P>
+</body></html>
 <h2>Bibliography</h2>
-</p><p> [<a name="casella:berger">casella:berger</a>] Casella, G. and R. L. Berger (1990). <em>Statistical Inference</em>. Duxbury Press.</p><p> [<a name="gani:jerwood">gani:jerwood</a>] Gani, J. and D. Jerwood (1971). Markov chain methods in chain binomial epidemic models. <em>Biometrics</em> <em>27</em>(3), 591--603.</p><p> [<a name="goswami:rao">goswami:rao</a>] Goswami, A. and B. Rao (2006). <em>A Course in Applied Stochastic Processes</em>. Number 40 in Texts and Readings in Mathematics. Hindustan Book  Agency.</p><p> [<a name="klemens:modeling">klemens:modeling</a>] Klemens, B. (2008). <em>Modeling with Data: Tools and Techniques for Statistical  Computing</em>. Princeton University Press.</p><p> [<a name="kmenta">kmenta</a>] Kmenta, J. (1986). <em>Elements of Econometrics</em> ($2\rm nd$ ed.). Macmillan Publishing Company.</body></html>
+</p><p> [<a name="casella:berger">casella:berger</a>] George Casella and Roger L Berger.  Inference. Duxbury Press, 1990.</p><p> [<a name="gani:jerwood">gani:jerwood</a>] J. Gani and D. Jerwood. Markov chain methods in chain binomial epidemic models.  27 (3): 591--603, 1971. URL  [<a name="goswami:rao">goswami:rao</a>] A Goswami and BV Rao.  Course in Applied Stochastic Processes. Number 40 in Texts and Readings in Mathematics. Hindustan Book  Agency, 2006.</p><p> [<a name="klemens:modeling">klemens:modeling</a>] Ben Klemens.  with Data: Tools and Techniques for Statistical  Computing. Princeton University Press, 2008.</p><p> [<a name="kmenta">kmenta</a>] Jan Kmenta.  of Econometrics. Macmillan Publishing Company, $2 nd$ edition, 1986.
