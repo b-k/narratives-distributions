@@ -1,3 +1,26 @@
+
+NewMMS(N2D~~<|\paragraph{$1}\label{m4_translit(<|$2|>~~'
+')}\leavevmode\\
+
+Narrative: $3
+
+Distribution: $4
+
+m4_ifelse(<|$5|>~~<||>~~~~<|Notes: $5|>)
+
+|>~~<|<div class="h2d"><a name="<||>m4_translit(<|$2|>~~'
+')"></a>Paragraph($1)
+
+<em>Narrative</em>: $3
+
+<em>Distribution</em>: $4
+
+m4_ifelse(<|$5|>~~<||>~~~~<|<em>Notes</em>: $5|>)
+</div>|>)
+
+
+
+
 This project lists open-form narratives and the closed-form distributions that
 approximate them. Its intent is to help you build estimable statistical models on a sound
 micro-level foundation.
