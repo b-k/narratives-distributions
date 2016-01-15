@@ -22,11 +22,7 @@ those too may have closed-form shortcuts that save you the trouble of writing do
 open-form simulation. Your final model may wind up being a combination of closed-form
 submodels.
 
-This project is an index of narratives that have closed-form equivalents, intended to help
-users develop their detailed micro-level narratives using known bulding blocks where they
-are available.
-
-Little, if any, of this is novel, and every narrative-to-distribution should have a
+Little, if any, of the content here is novel, and every narrative-to-distribution should have a
 reference to an existing work, (including Wikipedia, because this is uncontroversial,
 textbook stuff). However, it is being presented in what seems to be a novel way, to
 facilitate the development of detailed micro-level narratives using known bulding
